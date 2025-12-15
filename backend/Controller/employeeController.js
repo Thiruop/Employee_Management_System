@@ -1,7 +1,7 @@
 import { Employee } from "../Models/Schema.js";
 
 export const getEmployees = async (req, res) => {
-  const { search, page = 1, limit = 5, sort = "createdAt" } = req.query;
+  const { search, page = 1, limit = 10, sort = "createdAt" } = req.query;
 
   let query = {};
   if (search) {
